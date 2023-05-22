@@ -19,7 +19,7 @@ const test: Test[] = [
 	{ case: ")())())", answer: -3 },
 ];
 
-const countFloors = (data: string) => {
+const getDirections = (data: string) => {
 	const totalFloors = data.length;
 	const totalUp = data.split(")").join("").length;
 	const totalDown = totalFloors - totalUp;
@@ -33,6 +33,6 @@ const countFloors = (data: string) => {
 	return floor;
 };
 
-runTest(test, countFloors);
+runTest(test, getDirections);
 
-console.log(countFloors(input));
+console.log(getDirections(input));
